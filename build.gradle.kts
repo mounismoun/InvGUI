@@ -39,28 +39,48 @@ publishing {
             pom {
                 name.set("inv-gui")
                 description.set("A framework that helps easily create inventory GUIs when developing Minecraft plugins.")
-                url.set("https://github.com/moun/my-library")
+                url.set("https://github.com/mounismoun/${rootProject.name}")
 
                 licenses {
                     license {
-                        name.set("MIT")
-                        url.set("https://opensource.org/licenses/MIT")
+                        name.set("GNU General Public License version 3")
+                        url.set("https://opensource.org/licenses/GPL-3.0")
                     }
                 }
 
                 developers {
                     developer {
-                        id.set("moun")
-                        name.set("moun")
+                        id.set("mounismoun")
+                        name.set("mounismoun")
+                        email.set("mounismoun@gmail.com")
+                        url.set("https://github.com/mounismoun")
+                        roles.addAll("developer")
+                        timezone.set("Asia/Seoul")
                     }
                 }
 
                 scm {
-                    connection.set("scm:git:git://github.com/moun/my-library.git")
-                    developerConnection.set("scm:git:ssh://github.com/moun/my-library.git")
-                    url.set("https://github.com/moun/my-library")
+                    connection.set("scm:git:git://github.com/mounismoun/${rootProject.name}.git")
+                    developerConnection.set("scm:git:ssh://github.com/mounismoun/${rootProject.name}.git")
+                    url.set("https://github.com/mounismoun/${rootProject.name}")
                 }
             }
         }
     }
+
+    repositories {
+        maven {
+            name = "staging"
+            url = uri(layout.buildDirectory.dir("staging-repo"))
+        }
+    }
+}
+
+signing {
+    isRequired = true
+    useInMemoryPgpKeys(
+        file(System.getenv("SIGNING_KEY")).readText(),
+        System.getenv("SIGNING_PASSWORD")
+    )
+    sign(publishing.publications["maven"])
 }

@@ -85,6 +85,14 @@ val menu = gui(plugin, "Main menu",  3){
         }
 ```
 
+
+Register the corresponding event listener in onEnable()
+```kotlin
+override fun onEnable() {
+        server.pluginManager.registerEvents(GuiManager, this)
+    }
+```
+
 ## 📦 Installation
 
 This library is available on **Maven Central**.
@@ -212,6 +220,12 @@ val menu = gui(plugin, "메인 메뉴",  3){
                 player.sendMessage("gui닫음")
             }
         }
+```
+onEnable()에 해당 이벤트 리스너를 등록하세요.
+```kotlin
+override fun onEnable() {
+        server.pluginManager.registerEvents(GuiManager, this)
+    }
 ```
 
 ## 📦 설치 방법

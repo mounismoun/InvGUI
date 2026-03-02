@@ -90,7 +90,7 @@ val menu = gui(plugin, "Main menu",  3){
 This library is available on **Maven Central**.
 
 - **GroupId:** `io.github.mounismoun`
-- **ArtifactId:** `inv-gui`
+- **ArtifactId:** `InvGUI`
 - **Version:** `1.0.0`
 
 ### Gradle (Kotlin DSL)
@@ -101,7 +101,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.mounismoun:inv-gui:1.0.0")
+    implementation("io.github.mounismoun:InvGUI:1.0.0")
 }
 ```
 
@@ -113,7 +113,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.mounismoun:inv-gui:1.0.0'
+    implementation 'io.github.mounismoun:InvGUI:1.0.0'
 }
 ```
 
@@ -127,14 +127,7 @@ dependencies {
 </dependency>
 ```
 
-### Paper / Spigot Plugin
 
-```kotlin
-dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
-    implementation("io.github.mounismoun:inv-gui:1.0.0")
-}
-```
 
 Build using `shadowJar` and place the JAR inside your `plugins/` folder.
 
@@ -226,7 +219,7 @@ val menu = gui(plugin, "메인 메뉴",  3){
 이 라이브러리는 **Maven Central**에 배포되어 있습니다.
 
 - **GroupId:** `io.github.mounismoun`
-- **ArtifactId:** `inv-gui`
+- **ArtifactId:** `InvGUI`
 - **Version:** `1.0.0`
 
 ### Gradle (Kotlin DSL)
@@ -237,7 +230,7 @@ repositories {
 }
 
 dependencies {
-    implementation("io.github.mounismoun:inv-gui:1.0.0")
+    implementation("io.github.mounismoun:InvGUI:1.0.0")
 }
 ```
 
@@ -249,7 +242,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.mounismoun:inv-gui:1.0.0'
+    implementation 'io.github.mounismoun:InvGUI:1.0.0'
 }
 ```
 
@@ -258,18 +251,9 @@ dependencies {
 ```xml
 <dependency>
   <groupId>io.github.mounismoun</groupId>
-  <artifactId>inv-gui</artifactId>
+  <artifactId>InvGUI</artifactId>
   <version>1.0.0</version>
 </dependency>
-```
-
-### Paper / Spigot 플러그인
-
-```kotlin
-dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
-    implementation("io.github.mounismoun:inv-gui:1.0.0")
-}
 ```
 
 플러그인 프로젝트를 `shadowJar`로 빌드하세요.
